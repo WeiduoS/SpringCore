@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="student" class="com.web.beans.Student">
+        <property name="name" value="小明"></property>
+        <property name="homework" ref="homework"></property>
+    </bean>
+
+    <bean id="homework" class="com.web.beans.Homework">
+        <property name="content" value="how to calc 3+2 ?"></property>
+    </bean>
+
+
+    <bean id="teacher" class="com.web.beans.Teacher">
+        <property name="books">
+            <array>
+                <value>西游记</value>
+                <value>红楼梦</value>
+                <value>三国演义</value>
+                <value>水浒传</value>
+            </array>
+        </property>
+        <property name="hobbies">
+            <list>
+                <value>敲代码</value>
+                <value>听音乐</value>
+                <value>打台球</value>
+            </list>
+        </property>
+        <property name="students">
+            <list>
+                <!--xmlns:p="http://www.springframework.org/schema/p"-->
+                <bean id="student" class="com.web.beans.Student" p:name="hah" p:homework-ref="homework"></bean>
+                <ref bean="student"></ref>
+            </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="1" value="身份证"/>
+                <entry key="2" value="校园卡"/>
+                <entry key="3" value="医保卡"/>
+            </map>
+        </property>
+
+        <!--xmlns:util="http://www.springframework.org/schema/util-->
+        <!--http://www.springframework.org/schema/util-->
+        <!--http://www.springframework.org/schema/util/spring-util.xsd-->
+        <property name="map">
+            <util:map id="map"></util:map>
+        </property>
+
+        <property name="driveLicence">
+            <null/>
+        </property>
+
+        <property name="info">
+            <props>
+                <prop key="学号">1111</prop>
+                <prop key="姓名">张三</prop>
+            </props>
+        </property>
+    </bean>
+
+    <util:map id="map">
+        <entry key="1" value="元素1"/>
+        <entry key="2" value="元素2"/>
+        <entry key="3" value="元素3"/>
+    </util:map>
+
+
+    <bean id="director" class="com.web.beans.Director" parent="teacher" >
+        <property name="title" value="director"/>
+    </bean>
+</beans>

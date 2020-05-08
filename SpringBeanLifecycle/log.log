@@ -1,0 +1,35 @@
+2020-05-06 01:41:27  [ main:0 ] - [ DEBUG ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@290dbf45
+  2020-05-06 01:41:27  [ main:456 ] - [ DEBUG ]  Loaded 1 bean definitions from class path resource [ApplicationContext.xml]
+  2020-05-06 01:41:27  [ main:547 ] - [ DEBUG ]  Creating shared instance of singleton bean 'instantiationAwareBeanPostProcessor'
+  2020-05-06 01:42:00  [ main:0 ] - [ DEBUG ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@290dbf45
+  2020-05-06 01:42:00  [ main:373 ] - [ DEBUG ]  Loaded 1 bean definitions from class path resource [ApplicationContext02.xml]
+  2020-05-06 01:42:00  [ main:450 ] - [ DEBUG ]  Creating shared instance of singleton bean 'beanPostProcessor'
+  2020-05-06 01:42:44  [ main:0 ] - [ DEBUG ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4361bd48
+  2020-05-06 01:42:45  [ main:226 ] - [ DEBUG ]  Loaded 1 bean definitions from class path resource [ApplicationContext.xml]
+  2020-05-06 01:42:45  [ main:322 ] - [ DEBUG ]  Creating shared instance of singleton bean 'instantiationAwareBeanPostProcessor'
+  2020-05-06 01:43:27  [ main:1 ] - [ DEBUG ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@290dbf45
+  2020-05-06 01:43:27  [ main:437 ] - [ DEBUG ]  Loaded 1 bean definitions from class path resource [ApplicationContext.xml]
+  2020-05-06 01:43:27  [ main:528 ] - [ DEBUG ]  Creating shared instance of singleton bean 'instantiationAwareBeanPostProcessor'
+  2020-05-06 01:44:57  [ main:0 ] - [ DEBUG ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@290dbf45
+  2020-05-06 01:44:57  [ main:424 ] - [ DEBUG ]  Loaded 1 bean definitions from class path resource [ApplicationContext02.xml]
+  2020-05-06 01:44:57  [ main:500 ] - [ DEBUG ]  Creating shared instance of singleton bean 'beanPostProcessor'
+  2020-05-06 01:45:45  [ main:516 ] - [ DEBUG ]  Loaded 1 bean definitions from class path resource [ApplicationContext02.xml]
+  2020-05-06 01:45:45  [ main:589 ] - [ DEBUG ]  Creating shared instance of singleton bean 'beanPostProcessor'
+  2020-05-06 01:46:52  [ main:424 ] - [ DEBUG ]  Loaded 1 bean definitions from class path resource [ApplicationContext02.xml]
+  2020-05-06 01:46:52  [ main:563 ] - [ DEBUG ]  Creating shared instance of singleton bean 'beanPostProcessor'
+  2020-05-06 01:49:13  [ main:0 ] - [ DEBUG ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@290dbf45
+  2020-05-06 01:49:13  [ main:341 ] - [ DEBUG ]  Loaded 1 bean definitions from class path resource [ApplicationContext02.xml]
+  2020-05-06 01:49:13  [ main:431 ] - [ DEBUG ]  Creating shared instance of singleton bean 'beanPostProcessor'
+  2020-05-06 01:56:51  [ main:0 ] - [ DEBUG ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4361bd48
+  2020-05-06 01:57:25  [ main:0 ] - [ DEBUG ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4361bd48
+  2020-05-06 01:57:25  [ main:237 ] - [ DEBUG ]  Loaded 4 bean definitions from class path resource [ApplicationContext04.xml]
+  2020-05-06 01:57:25  [ main:417 ] - [ DEBUG ]  Creating shared instance of singleton bean 'beanFactoryPostProcessor'
+  2020-05-06 01:57:25  [ main:529 ] - [ DEBUG ]  Creating shared instance of singleton bean 'beanPostProcessor'
+  2020-05-06 01:57:25  [ main:530 ] - [ DEBUG ]  Creating shared instance of singleton bean 'instantiationAwareBeanPostProcessor'
+  2020-05-06 01:57:25  [ main:545 ] - [ DEBUG ]  Creating shared instance of singleton bean 'person'
+  2020-05-06 01:57:26  [ SpringContextShutdownHook:657 ] - [ DEBUG ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@4361bd48, started on Wed May 06 01:57:25 EDT 2020
+  2020-05-06 02:08:33  [ main:0 ] - [ DEBUG ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@290dbf45
+  2020-05-06 02:08:34  [ main:369 ] - [ DEBUG ]  Loaded 2 bean definitions from class path resource [ApplicationContext03.xml]
+  2020-05-06 02:08:34  [ main:484 ] - [ DEBUG ]  Creating shared instance of singleton bean 'beanFactoryPostProcessor'
+  2020-05-06 02:08:34  [ main:529 ] - [ DEBUG ]  Creating shared instance of singleton bean 'person'
+  

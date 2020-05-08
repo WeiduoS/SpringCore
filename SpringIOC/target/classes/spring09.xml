@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 注解扫描 -->
+    <!--type: 排除(扫描规则)-->
+    <!--expression: 写入全类名-->
+    <!--annotation：注解类型-->
+    <!--assignable_type指定的类型-->
+    <!--aspectj：按照Aspectj的表达式，基本上不会用到-->
+    <!--regex：按照正则表达式-->
+    <!--custom：自定义规则-->
+    <context:component-scan base-package="com.web" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+    </context:component-scan>
+</beans>

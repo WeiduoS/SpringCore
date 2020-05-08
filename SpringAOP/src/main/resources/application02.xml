@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd
+            http://www.springframework.org/schema/aop
+            http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <!-- 1 创建目标类 -->
+    <bean id="human" class="com.web.springaop.Human"></bean>
+    <!-- 2 创建切面类（通知） -->
+    <bean id="sleepHelperAspect" class="com.web.springaop.SleepHelperAspect"></bean>
+
+    <!-- 3 aop编程
+        3.1 导入命名空间
+        3.2 使用 <aop:config>进行配置
+                proxy-target-class="true" 声明使用cglib代理（不声明，且目标类为接口+实现类，则默认为jdk动态代理）
+            <aop:pointcut> 切入点 ，从目标对象获得具体方法
+            <aop:before>: 定义前置切面
+            <aop:after>: 定义后置切面
+        3.3 切入点表达式
+            execution(* com.itheima.c_spring_aop.*.*(..))
+            选择方法         返回值任意   包       类名任意   方法名任意   参数任意
+
+    -->
+    <aop:config proxy-target-class="true">
+        <aop:pointcut expression="execution(* *.sleep(..))" id="sleepPointcut"/>
+        <aop:aspect ref="sleepHelperAspect">
+            <!--前置通知-->
+            <aop:before method="beforeSleep" pointcut-ref="sleepPointcut"/>
+            <!--后置通知-->
+            <aop:after method="afterSleep" pointcut-ref="sleepPointcut"/>
+        </aop:aspect>
+    </aop:config>
+</beans>

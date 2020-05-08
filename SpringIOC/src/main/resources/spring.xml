@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.web.beans.Student">
+        <property name="name" value="小明"></property>
+        <property name="homework" ref="homework"></property>
+    </bean>
+
+    <bean id="homework" class="com.web.beans.Homework">
+        <property name="content" value="how to calc 3+2 ?"></property>
+    </bean>
+
+
+    <!--静态工厂：工厂本身不需要创建对象；通过静态方法调用，对象=工厂类.工厂方法名();-->
+    <bean id="homework02" class="com.web.factory.HomeworkStaticFactory" factory-method="homework">
+        <constructor-arg name="content" value="how to calc 3+2 ?"/>
+    </bean>
+
+    <!--实例工厂：工厂本身需要创建对象-->
+    <!--　　　　　　　　工厂类 工厂对象 = new 工厂类();-->
+    <!--　　　　　　　　工厂对象.工厂方法名();-->
+    <!--　　　　　　　　区别就是 一个是静态的方法 一个不是 静态方法可以直接调用，不是静态需要先new　-->
+    <bean id="homeworkInstanceFactory" class="com.web.factory.HomeworkInstanceFactory"></bean>
+
+    <bean id="homework03" class="com.web.beans.Homework" factory-bean="homeworkInstanceFactory" factory-method="homework">
+        <constructor-arg value="how to calc 3+2 ?" ></constructor-arg>
+    </bean>
+
+
+    <bean id="homework04" class="com.web.beans.Homework">
+        <constructor-arg type="java.lang.String" value="how to calc 3+2 ?" ></constructor-arg>
+    </bean>
+
+    <bean id="factoryBeanImpl" class="com.web.factory.FactoryBeanImpl"/>
+
+</beans>
